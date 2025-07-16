@@ -176,8 +176,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const images = ['event.jpg', 'events2.jpeg', 'event1.jpg'];
+    const images = [
+        'event.jpg',
+        'event2.jpg',
+        'event1.jpg'
+    ];
+
     let current = 0;
     const slideshow = document.getElementById('slideshow-image');
 
@@ -187,9 +191,8 @@ document.addEventListener("DOMContentLoaded", function () {
             current = (current + 1) % images.length;
             slideshow.src = images[current];
             slideshow.classList.remove('fade-out');
-        }, 400); // half the fade duration
+        }, 400); // fade duration
     }, 3000);
-});
 </script>
 
 
