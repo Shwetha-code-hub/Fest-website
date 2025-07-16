@@ -59,7 +59,7 @@
                 </button> 
             </div>
             <div class="header-image">
-                <img src="event.jpg" alt="Local Image">
+                <img id="slideshow-image" src="event.jpg" alt="Slideshow Image">
             </div>
         </div>
     </div>
@@ -159,6 +159,39 @@
 
 
     </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = ['event.jpg', 'events2.jpeg', 'event1.jpg'];
+    let current = 0;
+    const slideshow = document.getElementById('slideshow-image');
+
+    setInterval(() => {
+        slideshow.classList.add('fade-out');
+        setTimeout(() => {
+            current = (current + 1) % images.length;
+            slideshow.src = images[current];
+            slideshow.classList.remove('fade-out');
+        }, 400); // half the fade duration
+    }, 3000);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = ['event.jpg', 'events2.jpeg', 'event1.jpg'];
+    let current = 0;
+    const slideshow = document.getElementById('slideshow-image');
+
+    setInterval(() => {
+        slideshow.classList.add('fade-out');
+        setTimeout(() => {
+            current = (current + 1) % images.length;
+            slideshow.src = images[current];
+            slideshow.classList.remove('fade-out');
+        }, 400); // half the fade duration
+    }, 3000);
+});
+</script>
+
 
 </body>
 

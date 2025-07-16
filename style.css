@@ -400,6 +400,18 @@ body {
 .footer-note a:hover {
   text-decoration: underline;
 }
+#slideshow-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.8s ease-in-out;
+  opacity: 1;
+}
+
+#slideshow-image.fade-out {
+  opacity: 0;
+}
+
 
 @media (max-width: 768px) {
   .navbar-links {
