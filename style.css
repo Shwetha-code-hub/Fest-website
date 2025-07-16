@@ -1,0 +1,424 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #0b0c0c, #1a1d1f);
+  color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+}
+
+
+/* Navbar base */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: #0b0c0c;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo text */
+.navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Navigation links */
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #020305;
+    box-shadow: rgb(39, 177, 231) 0px 20px 30px -10px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    color: white;
+    z-index: 999; /* So it appears above other content */
+}
+
+/* Individual link container (optional) */
+.side-navbar-link {
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* All link styles inside sidebar */
+.side-navbar-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.side-navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.side-navbar-links a:hover {
+    text-decoration: underline;
+    color: #27b1e7;
+}
+
+.section-divider {
+  height: 2px;
+  background: #f5f4f4;
+  margin: 40px auto;
+  width: 60%;
+  opacity: 0.3;
+}
+
+.header {
+    padding: 100px 20px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.header-text button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-text button:hover {
+    background-color: #bfbdbd;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.events-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.events-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3c4249;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.events {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+
+.events-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.events-container:hover {
+    transform: translateY(-10px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.events-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+    background-color: rgb(177, 175, 175);
+}
+
+.events-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Button animation */
+.events-container button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0f0d0d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.events-container button:hover {
+    background-color: #070808;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(49, 50, 50, 0.4);
+}
+
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.follow-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.follow-btn:hover {
+    background-color: #c7caca;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Register Page */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0b0c0c, #0b0c0c);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0); /* initial position */
+}
+
+.form-container:hover {
+  transform: translateY(-6px); /* gentle lift */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25); /* softer shadow */
+}
+
+
+.form-container h1 {
+  text-align: center;
+  color: #030303;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 95%;
+  padding: 12px;
+  border: 3px solid #141313;
+  border-radius: 12px;
+  font-size: 14px;
+}
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #08090b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.register-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #3a3a3a, #848484, #eceef0);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.register-btn:hover::before {
+  left: 0;
+}
+
+.register-btn:hover {
+  color: black;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(9, 9, 9, 0.3);
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.footer-note a {
+  color: #070809;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #3c4249;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-menu-toggle {
+    display: block;
+  }
+}

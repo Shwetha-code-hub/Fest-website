@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Scintillation</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="poppins-regular">Scintillation</h1>
+    <div class="navbar-links">
+      <a href="index.html" class="poppins-regular">Home</a>
+      <a href="Register.html" class="poppins-regular">Register</a>
+      <a href="#contact" class="poppins-regular">Contact</a>
+    </div>
+    <div class="navbar-menu-toggle" onclick="showNavbar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <div class="register-page">
+    <div class="form-container">
+      <h1>Register for Scintillation</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" placeholder="example@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="0123456789" required />
+        </div>
+        <div class="form-group">
+          <label for="event">Select Event</label>
+          <select id="event" required>
+            <option value="">-- Choose an event --</option>
+            <option value="dance">Solo Dance</option>
+            <option value="singing">Singing</option>
+            <option value="fashion">Fashion Show</option>
+            <option value="duet">Duet Performance</option>
+            <option value="photography">Photography</option>
+            <option value="Battle of Bands">Battle of bands</option>
+          </select>
+        </div>
+        <button type="submit" class="register-btn">Submit</button>
+      </form>
+      <div class="footer-note">
+        <p>Go back to <a href="index.html">Home</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showNavbar() {
+      document.querySelector(".side-navbar").style.display = "block";
+    }
+    function hideNavbar() {
+      document.querySelector(".side-navbar").style.display = "none";
+    }
+  </script>
+</body>
+</html>

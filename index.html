@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scintillation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!--My CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <h1 class="poppins-regular">Scintillation</h1>
+         <div class="navbar-links">
+    <a href="index.html" class="poppins-regular">Home</a>
+    <a href="Register.html" class="poppins-regular">Register</a>
+    <a href="#FAQs" class="poppins-regular">FAQs</a>
+</div>
+
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="hideNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <a href="#home" class="side-navbar-link">Home</a>
+            <a href="#services" class="side-navbar-link">Events</a>
+            <a href="#contact" class="side-navbar-link">Contact</a>
+        </div>
+    </div>
+
+    <!--Header-->
+
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-text">
+                <h1>Welcome to Scintillation</h1>
+                <p>Your gateway to the world of events and connections.</p>
+                <button class="poppins-regular"
+                    onclick="document.getElementById('events').scrollIntoView({ behavior: 'smooth' })">
+                </button>
+            </div>
+            <div class="header-image">
+                <img src="event.jpg" alt="Local Image">
+            </div>
+        </div>
+    </div>
+    <div class="section-divider"></div>
+
+
+    <div id="events" class="events">
+        <div>
+            <h2 class="events-heading">Our Events</h2>
+        </div>
+        <div class="events">
+            <div class="events-container">
+                <img src="dance.jpeg" alt="Event Image"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="singing.jpg" alt="singing"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="western.jpg" alt="western"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="fashion.jpg" alt="fashion"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="battle.jpg" alt="battle"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="photo.jpg" alt="battle"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="standup.jpg" alt="battle"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="hog.jpg" alt="battle"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="events-container">
+                <img src="duet.jpg" alt="battle"
+                    style="width: 200px; height: 200px; border-radius: 10px; object-fit: cover;">
+                <button>Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="section-divider"></div>
+
+    <!--About us-->
+    <div class="about">
+        <h2>Stay Updated</h2>
+        <p>Follow us on social media for the latest news and instant event updates.</p>
+        <div>
+            <a href="https://www.instagram.com/scintillation.jnc?igsh=MXExOTRldDY4YjdzeQ==" target="_blank"
+                class="follow-btn">Follow Us</a>
+        </div>
+    </div>
+
+
+    <script>
+        function showNavbar() {
+            document.querySelector(".side-navbar").style.display = "block";
+        }
+
+        function hideNavbar() {
+            document.querySelector(".side-navbar").style.display = "none";
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".side-navbar").style.display = "none";
+        });
+
+        function showNavbar() {
+            const navLinks = document.querySelector('.navbar-links');
+            navLinks.classList.toggle('show');
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
