@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Scintillation Fest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toggle-container">
+    <button id="modeToggle">🌙 Dark Mode</button>
+  </div>
+
+  <div class="faq-container">
+    <h1>✨ Scintillation Fest - FAQs ✨</h1>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">What is Scintillation?</button>
+        <div class="faq-answer">
+          <p>Scintillation is our college’s biggest annual cultural and talent fest, bringing together music, dance, drama, fashion, art, and tech under one roof.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">When does Scintillation take place?</button>
+        <div class="faq-answer">
+          <p>It is held once a year, typically in September, and spans 2–3 days of non-stop energy and fun.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Who can attend Scintillation?</button>
+        <div class="faq-answer">
+          <p>The fest is open to students of our college, other colleges (on registration), and invited guests or alumni.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I participate in events?</button>
+        <div class="faq-answer">
+          <p>Register online on our website, visit the campus help desk, or follow instructions on our Instagram handle.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Are there any prizes?</button>
+        <div class="faq-answer">
+          <p>Yes! Winners get cash prizes, certificates, trophies, and goodies. Participation certificates are also provided.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I volunteer?</button>
+        <div class="faq-answer">
+          <p>Apply through interviews/auditions held weeks before the fest. Keep an eye on official college notices and Instagram!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Accordion functionality
+    document.querySelectorAll('.faq-question').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        document.querySelectorAll('.faq-answer').forEach((el) => {
+          if (el !== answer) el.style.maxHeight = null;
+        });
+        answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
+      });
+    });
+
+    // Dark/Light mode toggle
+    const toggleBtn = document.getElementById("modeToggle");
+    const body = document.body;
+
+    // Load saved mode
+    if (localStorage.getItem("theme") === "light") {
+      body.classList.add("light-mode");
+      toggleBtn.textContent = "🌙 Dark Mode";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light-mode");
+      const isLight = body.classList.contains("light-mode");
+      toggleBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    });
+  </script>
+</body>
+</html>
