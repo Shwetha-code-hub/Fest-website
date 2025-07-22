@@ -417,23 +417,6 @@ body {
 }
 
 
-:root {
-  --bg-color: #0d1117;
-  --text-color: #ffffff;
-  --primary-color: #00ffe0;
-  --card-color: #161b22;
-  --accent-hover: #1abc9c;
-}
-
-.light-mode {
-  --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-  --primary-color: #0077cc;
-  --card-color: #f2f2f2;
-  --accent-hover: #005fa3;
-}
-
-
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
